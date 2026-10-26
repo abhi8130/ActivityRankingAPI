@@ -1,0 +1,933 @@
+{
+  "info": {
+    "_postman_id": "270e6448-e68b-42ae-a2ef-abf1580c1b44",
+    "name": "Activity Ranking Mock Server",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27085347",
+    "_collection_link": "https://go.postman.co/collection/27085347-270e6448-e68b-42ae-a2ef-abf1580c1b44?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Positive/Happy Flow",
+      "item": [
+        {
+          "name": "v1/activites/rankings",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "valid details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://8c5e2403-055b-4cd9-bc78-8146a2b27ec8.mock.pstmn.io/v1/activities/rankings?city=London&town=Bromley",
+                  "protocol": "https",
+                  "host": [
+                    "8c5e2403-055b-4cd9-bc78-8146a2b27ec8",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "London"
+                    },
+                    {
+                      "key": "town",
+                      "value": "Bromley"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"city\": \"London\",\n  \"town\": \"Bromley\",\n  \"generatedAt\": \"2026-10-24T06:00:00Z\",\n  \"totalDays\": 7,\n  \"days\": [\n    {\n      \"date\": \"2026-10-24\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 92.0, \"reasoning\": \"Clear skies and 19°C, ideal for sightseeing outdoors\" },\n        { \"rank\": 2, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 48.0, \"reasoning\": \"Good outdoor conditions make indoor activities less essential today\" },\n        { \"rank\": 3, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 10.0, \"reasoning\": \"No coastal access near Bromley; activity not locally applicable\" },\n        { \"rank\": 4, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 5.0, \"reasoning\": \"No snowfall forecast and temperatures well above freezing\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-25\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 85.5, \"reasoning\": \"Light rain expected through the day, better suited to indoor activities\" },\n        { \"rank\": 2, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 42.0, \"reasoning\": \"Intermittent showers and overcast skies, 11°C\" },\n        { \"rank\": 3, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 8.0, \"reasoning\": \"No coastal access near Bromley\" },\n        { \"rank\": 4, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 5.0, \"reasoning\": \"No snowfall forecast, 11°C\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-26\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 60.0, \"reasoning\": \"Overcast but dry, 14°C with moderate wind\" },\n        { \"rank\": 2, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 58.0, \"reasoning\": \"Breezy conditions make indoor activities an equally comfortable choice\" },\n        { \"rank\": 3, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 9.0, \"reasoning\": \"No coastal access near Bromley\" },\n        { \"rank\": 4, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 5.0, \"reasoning\": \"No snowfall forecast, 13°C\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-27\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 95.0, \"reasoning\": \"Thunderstorms forecast with heavy rain; outdoor activity not advised\" },\n        { \"rank\": 2, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 15.0, \"reasoning\": \"Thunderstorm risk makes outdoor conditions unsuitable\" },\n        { \"rank\": 3, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 7.0, \"reasoning\": \"No coastal access near Bromley\" },\n        { \"rank\": 4, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 4.0, \"reasoning\": \"No snowfall forecast, 12°C\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-28\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 78.0, \"reasoning\": \"Unseasonal heavy snowfall forecast, 9cm accumulation expected (fixture/test scenario)\" },\n        { \"rank\": 2, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 65.0, \"reasoning\": \"Cold and snowy conditions favour indoor activities\" },\n        { \"rank\": 3, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 30.0, \"reasoning\": \"Snow and sub-zero wind chill reduce outdoor comfort\" },\n        { \"rank\": 4, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 5.0, \"reasoning\": \"No coastal access near Bromley\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-29\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 88.0, \"reasoning\": \"Clear skies and 9°C, crisp autumn conditions\" },\n        { \"rank\": 2, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 40.0, \"reasoning\": \"Favourable outdoor weather reduces indoor appeal\" },\n        { \"rank\": 3, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 12.0, \"reasoning\": \"Residual snow cover but no further snowfall expected\" },\n        { \"rank\": 4, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 6.0, \"reasoning\": \"No coastal access near Bromley\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-30\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 70.0, \"reasoning\": \"Dry and windy, 11°C\" },\n        { \"rank\": 2, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 50.0, \"reasoning\": \"Strong gusts may make extended outdoor exposure less comfortable\" },\n        { \"rank\": 3, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 8.0, \"reasoning\": \"No further snowfall expected, residual snow melting\" },\n        { \"rank\": 4, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 7.0, \"reasoning\": \"No coastal access near Bromley\" }\n      ]\n    }\n  ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "v1/activites/rankings (Partial Response)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "partial string i.e. can",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=can&town=",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "can"
+                    },
+                    {
+                      "key": "town",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity",
+              "code": 422,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"AMBIGUOUS_LOCATION\",\n    \"message\": \"The city or town name provided matches multiple locations or is too broad to resolve automatically. Use correct city and town to get best results out of it\",\n    \"matches\": [\n        {\n            \"locationId\": \"2172517\",\n            \"city\": \"Canberra\",\n            \"region\": \"Australian Capital Territory\",\n            \"country\": \"Australia\"\n        },\n        {\n            \"locationId\": \"1586203\",\n            \"city\": \"Can Tho\",\n            \"region\": \"Can Tho City\",\n            \"country\": \"Vietnam\"\n        },\n        {\n            \"locationId\": \"749795\",\n            \"city\": \"Çan\",\n            \"region\": \"Çanakkale\",\n            \"country\": \"Türkiye\"\n        },\n        {\n            \"locationId\": \"319525\",\n            \"city\": \"Çan\",\n            \"region\": \"Elazığ\",\n            \"country\": \"Türkiye\"\n        },\n        {\n            \"locationId\": \"8953448\",\n            \"city\": \"Can\",\n            \"region\": \"Veneto\",\n            \"country\": \"Italy\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "partial details with correct city name",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=London&town=",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "London"
+                    },
+                    {
+                      "key": "town",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"query\": {\n        \"city\": \"London\",\n        \"town\": null\n    },\n    \"matches\": [\n        {\n            \"locationId\": \"2643743\",\n            \"city\": \"London\",\n            \"town\": null,\n            \"region\": \"Greater London, England\",\n            \"country\": \"United Kingdom\",\n            \"latitude\": 51.50853,\n            \"longitude\": -0.12574,\n            \"timezone\": \"Europe/London\",\n            \"population\": 8961989\n        },\n        {\n            \"locationId\": \"6058560\",\n            \"city\": \"London\",\n            \"town\": null,\n            \"region\": \"Middlesex County, Ontario\",\n            \"country\": \"Canada\",\n            \"latitude\": 42.98339,\n            \"longitude\": -81.23304,\n            \"timezone\": \"America/Toronto\",\n            \"population\": 422324\n        }\n    ],\n    \"total\": 2\n}"
+            },
+            {
+              "name": "incorrectCityorTown",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=zzqxv&town",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "zzqxv"
+                    },
+                    {
+                      "key": "town",
+                      "value": null
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"LOCATION_NOT_FOUND\",\n    \"message\": \"No location matching 'zzqxv' could be found. Check the spelling once\",\n    \"query\": {\n        \"city\": \"zzqxv\",\n        \"town\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "v1/activites/rankings Copy",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": [
+            {
+              "name": "valid details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=London&town=Bromley",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "London"
+                    },
+                    {
+                      "key": "town",
+                      "value": "Bromley"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"city\": \"London\",\n  \"town\": \"Bromley\",\n  \"generatedAt\": \"2026-10-24T06:00:00Z\",\n  \"totalDays\": 7,\n  \"days\": [\n    {\n      \"date\": \"2026-10-24\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 92.0, \"reasoning\": \"Clear skies and 19°C, ideal for sightseeing outdoors\" },\n        { \"rank\": 2, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 48.0, \"reasoning\": \"Good outdoor conditions make indoor activities less essential today\" },\n        { \"rank\": 3, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 10.0, \"reasoning\": \"No coastal access near Bromley; activity not locally applicable\" },\n        { \"rank\": 4, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 5.0, \"reasoning\": \"No snowfall forecast and temperatures well above freezing\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-25\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 85.5, \"reasoning\": \"Light rain expected through the day, better suited to indoor activities\" },\n        { \"rank\": 2, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 42.0, \"reasoning\": \"Intermittent showers and overcast skies, 11°C\" },\n        { \"rank\": 3, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 8.0, \"reasoning\": \"No coastal access near Bromley\" },\n        { \"rank\": 4, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 5.0, \"reasoning\": \"No snowfall forecast, 11°C\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-26\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 60.0, \"reasoning\": \"Overcast but dry, 14°C with moderate wind\" },\n        { \"rank\": 2, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 58.0, \"reasoning\": \"Breezy conditions make indoor activities an equally comfortable choice\" },\n        { \"rank\": 3, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 9.0, \"reasoning\": \"No coastal access near Bromley\" },\n        { \"rank\": 4, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 5.0, \"reasoning\": \"No snowfall forecast, 13°C\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-27\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 95.0, \"reasoning\": \"Thunderstorms forecast with heavy rain; outdoor activity not advised\" },\n        { \"rank\": 2, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 15.0, \"reasoning\": \"Thunderstorm risk makes outdoor conditions unsuitable\" },\n        { \"rank\": 3, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 7.0, \"reasoning\": \"No coastal access near Bromley\" },\n        { \"rank\": 4, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 4.0, \"reasoning\": \"No snowfall forecast, 12°C\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-28\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 78.0, \"reasoning\": \"Unseasonal heavy snowfall forecast, 9cm accumulation expected (fixture/test scenario)\" },\n        { \"rank\": 2, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 65.0, \"reasoning\": \"Cold and snowy conditions favour indoor activities\" },\n        { \"rank\": 3, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 30.0, \"reasoning\": \"Snow and sub-zero wind chill reduce outdoor comfort\" },\n        { \"rank\": 4, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 5.0, \"reasoning\": \"No coastal access near Bromley\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-29\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 88.0, \"reasoning\": \"Clear skies and 9°C, crisp autumn conditions\" },\n        { \"rank\": 2, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 40.0, \"reasoning\": \"Favourable outdoor weather reduces indoor appeal\" },\n        { \"rank\": 3, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 12.0, \"reasoning\": \"Residual snow cover but no further snowfall expected\" },\n        { \"rank\": 4, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 6.0, \"reasoning\": \"No coastal access near Bromley\" }\n      ]\n    },\n    {\n      \"date\": \"2026-10-30\",\n      \"rankings\": [\n        { \"rank\": 1, \"activityId\": \"act-outdoor-sightseeing\", \"name\": \"Outdoor Sightseeing\", \"score\": 70.0, \"reasoning\": \"Dry and windy, 11°C\" },\n        { \"rank\": 2, \"activityId\": \"act-indoor-sightseeing\", \"name\": \"Indoor Sightseeing\", \"score\": 50.0, \"reasoning\": \"Strong gusts may make extended outdoor exposure less comfortable\" },\n        { \"rank\": 3, \"activityId\": \"act-skiing\", \"name\": \"Skiing\", \"score\": 8.0, \"reasoning\": \"No further snowfall expected, residual snow melting\" },\n        { \"rank\": 4, \"activityId\": \"act-surfing\", \"name\": \"Surfing\", \"score\": 7.0, \"reasoning\": \"No coastal access near Bromley\" }\n      ]\n    }\n  ]\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Negative Flow",
+      "item": [
+        {
+          "name": "incorrectBoth",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://8c5e2403-055b-4cd9-bc78-8146a2b27ec8.mock.pstmn.io/v1/activities/rankings?city=lonf&town=brof",
+              "protocol": "https",
+              "host": [
+                "8c5e2403-055b-4cd9-bc78-8146a2b27ec8",
+                "mock",
+                "pstmn",
+                "io"
+              ],
+              "path": [
+                "v1",
+                "activities",
+                "rankings"
+              ],
+              "query": [
+                {
+                  "key": "city",
+                  "value": "lonf"
+                },
+                {
+                  "key": "town",
+                  "value": "brof"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "incorrect City & Town - Null",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=zzqxv&town",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "zzqxv"
+                    },
+                    {
+                      "key": "town",
+                      "value": null
+                    }
+                  ]
+                }
+              },
+              "code": 404,
+              "_postman_previewlanguage": "text",
+              "header": null,
+              "cookie": [],
+              "body": "\r\n{\r\n  \"error\": \"LOCATION_NOT_FOUND\",\r\n  \"message\": \"No location matching 'zzqxv' could be found. Check the spelling once\",\r\n  \"query\": { \"city\": \"zzqxv\", \"town\": null }\r\n}"
+            },
+            {
+              "name": "incorrect City - Null & Town",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=&town=zzqxv",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": ""
+                    },
+                    {
+                      "key": "town",
+                      "value": "zzqxv"
+                    }
+                  ]
+                }
+              },
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"LOCATION_NOT_FOUND\",\n    \"message\": \"No location matching 'zzqxv' could be found. Check the spelling once\",\n    \"query\": {\n        \"city\": null,\n        \"town\": \"zzqxv\"\n    }\n}"
+            },
+            {
+              "name": "incorrect string Both",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=lonf&town=brof",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "lonf"
+                    },
+                    {
+                      "key": "town",
+                      "value": "brof"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\r\n    \"error\": \"LOCATION_NOT_FOUND\",\r\n    \"message\": \"No location matching city = 'lonf' and town = 'brof' could be found. Check the spelling once\",\r\n    \"query\": {\r\n        \"city\": \"lonf\",\r\n        \"town\": \"brof\"\r\n    }\r\n}"
+            },
+            {
+              "name": "pass both null",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=null&town=null",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "null"
+                    },
+                    {
+                      "key": "town",
+                      "value": "null"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"LOCATION_NOT_FOUND\",\n    \"message\": \"No location matching city = '' and town = '' could be found. Check the spelling once\",\n    \"query\": {\n        \"city\": null,\n        \"town\": null\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Edge Cases / Server Failure",
+      "item": [
+        {
+          "name": "Open-Meteo is down",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-mock-response-name",
+                "value": "partial details"
+              }
+            ],
+            "url": {
+              "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=london&town=",
+              "protocol": "https",
+              "host": [
+                "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                "mock",
+                "pstmn",
+                "io"
+              ],
+              "path": [
+                "v1",
+                "activities",
+                "rankings"
+              ],
+              "query": [
+                {
+                  "key": "city",
+                  "value": "london"
+                },
+                {
+                  "key": "town",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "502 Bad Gateway",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-mock-response-name",
+                    "value": "502 Bad Gateway"
+                  }
+                ],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=london&town=bromley",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "london"
+                    },
+                    {
+                      "key": "town",
+                      "value": "bromley"
+                    }
+                  ]
+                }
+              },
+              "code": 502,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"UPSTREAM_WEATHER_UNAVAILABLE\",\n  \"message\": \"Weather data is temporarily unavailable. Please try again shortly.\",\n  \"query\": { \"city\": \"London\", \"town\": \"Bromley\" }\n}"
+            },
+            {
+              "name": "partial details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "x-mock-response-name",
+                    "value": "partial details"
+                  }
+                ],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=london&town=bromley",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "london"
+                    },
+                    {
+                      "key": "town",
+                      "value": "bromley"
+                    }
+                  ]
+                }
+              },
+              "code": 502,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": \"UPSTREAM_WEATHER_UNAVAILABLE\",\n    \"message\": \"Weather data is temporarily unavailable. Please try again shortly.\",\n    \"query\": {\n        \"city\": \"London\",\n        \"town\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Open-Meteo is rate-limited",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-mock-response-name",
+                "value": "rate-limited"
+              }
+            ],
+            "url": {
+              "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/ranking?city=London&town=",
+              "protocol": "https",
+              "host": [
+                "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                "mock",
+                "pstmn",
+                "io"
+              ],
+              "path": [
+                "v1",
+                "activities",
+                "ranking"
+              ],
+              "query": [
+                {
+                  "key": "city",
+                  "value": "London"
+                },
+                {
+                  "key": "town",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "rate-limited",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/rankings?city=london&town=bromley",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "rankings"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "london"
+                    },
+                    {
+                      "key": "town",
+                      "value": "bromley"
+                    }
+                  ]
+                }
+              },
+              "code": 502,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"UPSTREAM_WEATHER_UNAVAILABLE\",\n  \"message\": \"Weather data is temporarily unavailable. Please try again shortly.\",\n  \"query\": { \"city\": \"London\", \"town\": \"Bromley\" }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Open-Meteo Timeout",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-mock-response-name",
+                "value": "504 Gateway Timeout "
+              }
+            ],
+            "url": {
+              "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/ranking?city=London&town=",
+              "protocol": "https",
+              "host": [
+                "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                "mock",
+                "pstmn",
+                "io"
+              ],
+              "path": [
+                "v1",
+                "activities",
+                "ranking"
+              ],
+              "query": [
+                {
+                  "key": "city",
+                  "value": "London"
+                },
+                {
+                  "key": "town",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "504 Gateway Timeout",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/ranking?city=London&town=Bromley",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "ranking"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "London"
+                    },
+                    {
+                      "key": "town",
+                      "value": "Bromley"
+                    }
+                  ]
+                }
+              },
+              "code": 504,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"UPSTREAM_WEATHER_TIMEOUT\",\n  \"message\": \"Weather data is temporarily unavailable. Please try again shortly.\",\n  \"query\": { \"city\": \"London\", \"town\": \"Bromley\" }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Open-Meteo service unavailable",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-mock-response-name",
+                "value": "503 Service Unavailable"
+              }
+            ],
+            "url": {
+              "raw": "https://8c5e2403-055b-4cd9-bc78-8146a2b27ec8.mock.pstmn.io/v1/activities/ranking?city=London&town=",
+              "protocol": "https",
+              "host": [
+                "8c5e2403-055b-4cd9-bc78-8146a2b27ec8",
+                "mock",
+                "pstmn",
+                "io"
+              ],
+              "path": [
+                "v1",
+                "activities",
+                "ranking"
+              ],
+              "query": [
+                {
+                  "key": "city",
+                  "value": "London"
+                },
+                {
+                  "key": "town",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "503 Service Unavailable",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/ranking?city=London&town=Bromley",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "ranking"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "London"
+                    },
+                    {
+                      "key": "town",
+                      "value": "Bromley"
+                    }
+                  ]
+                }
+              },
+              "code": 503,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"UPSTREAM_WEATHER_UNAVAILABLE\",\n  \"message\": \"Weather data is temporarily unavailable. Please try again shortly.\",\n  \"query\": { \"city\": \"London\", \"town\": \"Bromley\" }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Open-Meteo Internal Server Error",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-mock-response-name",
+                "value": "500 Internal Server Error"
+              }
+            ],
+            "url": {
+              "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/ranking?city=London&town=",
+              "protocol": "https",
+              "host": [
+                "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                "mock",
+                "pstmn",
+                "io"
+              ],
+              "path": [
+                "v1",
+                "activities",
+                "ranking"
+              ],
+              "query": [
+                {
+                  "key": "city",
+                  "value": "London"
+                },
+                {
+                  "key": "town",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "500 Internal Server Error",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://e18e5c60-546f-46fe-8107-ec139a8bafd6.mock.pstmn.io/v1/activities/ranking?city=London&town=Bromley",
+                  "protocol": "https",
+                  "host": [
+                    "e18e5c60-546f-46fe-8107-ec139a8bafd6",
+                    "mock",
+                    "pstmn",
+                    "io"
+                  ],
+                  "path": [
+                    "v1",
+                    "activities",
+                    "ranking"
+                  ],
+                  "query": [
+                    {
+                      "key": "city",
+                      "value": "London"
+                    },
+                    {
+                      "key": "town",
+                      "value": "Bromley"
+                    }
+                  ]
+                }
+              },
+              "code": 500,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"error\": \"UPSTREAM_WEATHER_UNAVAILABLE\",\n  \"message\": \"Weather data is temporarily unavailable. Please try again shortly.\",\n  \"query\": { \"city\": \"London\", \"town\": \"Bromley\" }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
