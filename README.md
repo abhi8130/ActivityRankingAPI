@@ -43,3 +43,8 @@ However,results are being published as a HTML Report which having Gherkin Langua
 
 ![alt text](image.png)
 
+## Assumptions
+- Open Meteo API 7 days data appended from the backend system in Activity Ranking API Response 
+- Create Mock Server in Postman(to handle/manipulate calls and responses)
+- FW covers both positive & negative scenario's along with edge cases if Open-Meteo API API doesn't give any response (either by server being down, timeout or internal server error)
+- Do Assertions on Status code/messages, error code/messages and JSON Schema Validation using AJV
